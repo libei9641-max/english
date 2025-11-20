@@ -1,0 +1,7 @@
+{
+  "name": "LingoFlow - Scenario English",
+  "description": "A scenario-based English learning assistant featuring AI-generated dialogues, pronunciation coaching, and role-playing.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

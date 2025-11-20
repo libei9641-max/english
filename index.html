@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>LingoFlow English</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#4F46E5', // Indigo 600
+              secondary: '#10B981', // Emerald 500
+              surface: '#F8FAFC', // Slate 50
+              darkSurface: '#0F172A', // Slate 900
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            padding: {
+              'safe-bottom': 'env(safe-area-inset-bottom)',
+              'safe-top': 'env(safe-area-inset-top)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar hiding for clean mobile UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* WeChat/Mobile App feel optimizations */
+      body {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none; /* Disable long-press menu */
+        user-select: none; /* Disable text selection by default */
+      }
+      
+      /* Allow text selection on specific content for learning */
+      .selectable-text {
+        user-select: text;
+        -webkit-user-select: text;
+      }
+
+      /* Safe area utility classes */
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-surface dark:bg-darkSurface text-slate-800 dark:text-slate-100 transition-colors duration-200 overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
